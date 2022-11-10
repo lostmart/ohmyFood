@@ -1,0 +1,11 @@
+.header {
+	height: 63px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 2px 8px #00000038;
+
+	& .header__logo {
+		max-width: 164px;
+	}
+}

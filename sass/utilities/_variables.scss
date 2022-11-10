@@ -1,0 +1,15 @@
+$white-cream: #f6f6f6;
+$prm-clr: #9356dc;
+$sec-clr: #ff79da;
+$ter-clr: #99e2d0;
+$clr-grad: linear-gradient(170deg, $sec-clr 0%, $prm-clr 100%);
+
+$box-shadow: 0px 3px 20px 0px rgba(112, 112, 112, 0.6);
+$hover-shadow: 0px 5px 23px 0px rgba(112, 112, 112, 0.9);
+
+$font-size: (
+	restaurant-name: 32px,
+	section-title: 25px,
+	component-title: 18px,
+	basic: 16px,
+);
