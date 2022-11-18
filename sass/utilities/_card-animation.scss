@@ -31,3 +31,12 @@
 		transform: scaleY(0);
 	}
 }
+
+@keyframes check {
+	from {
+		transform: translateX(61px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

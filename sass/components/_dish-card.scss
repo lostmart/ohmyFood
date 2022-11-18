@@ -9,8 +9,9 @@
 	height: 70px;
 	opacity: 0;
 	animation: entry-menu-card 900ms ease-in-out 200ms forwards;
-	margin: 14px 0px;
+	margin: 14px 0;
 	cursor: pointer;
+	overflow: hidden;
 	@include layout-card;
 
 	@include desktop-only {
@@ -46,15 +47,15 @@
 
 	&__check {
 		position: absolute;
-		right: 0px;
-		bottom: 0px;
+		right: 0;
+		bottom: 0;
 		width: 61px;
 		height: 100%;
 		background-color: $ter-clr;
 		transform-origin: right;
-		transform: scaleX(0);
-		transition: transform 500ms ease-in-out;
-		border-radius: 0px 15px 15px 0px;
+		transform: translateX(61px);
+		// transition: transform 500ms ease-in-out;
+		border-radius: 0 15px 15px 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -73,7 +74,7 @@
 	}
 
 	&:hover > &__check {
-		transform: scaleX(1);
+		animation: check 500ms ease-in-out forwards;
 
 		span {
 			transform: rotate(360deg);
