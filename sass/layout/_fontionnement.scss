@@ -50,6 +50,8 @@
 		font-size: map-get($map: $font-size, $key: component-title);
 		position: relative;
 		margin: 13px 0px 13px 13px;
+		transition: all 350ms;
+		cursor: pointer;
 
 		&__ico {
 			color: grey;
@@ -62,6 +64,7 @@
 
 	&__content:hover {
 		background-color: #f5edff;
+		box-shadow: $hover-shadow;
 
 		& .step__ico {
 			color: $prm-clr;

@@ -1,0 +1,94 @@
+/*----------Menu-page- Organistaion et animation du contenu des cards plats */
+.dish-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: white;
+	height: 70px;
+	opacity: 0;
+	animation: entry-menu-card 900ms ease-in-out 200ms forwards;
+	margin: 14px 0px;
+	cursor: pointer;
+	@include layout-card;
+
+	@include desktop-only {
+		position: relative;
+	}
+
+	&__title {
+		margin: 0.2rem 0.6rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 85%;
+		transition: all 500ms ease-in-out;
+	}
+
+	&__byline {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 73%;
+		margin: 0.2rem 0.6rem;
+		transition: all 500ms ease-in-out;
+	}
+
+	&__price {
+		margin: 0.2rem 0;
+		font-weight: bold;
+		transform: translate(-5px, 13px);
+		transition: all 500ms ease-in-out;
+		position: absolute;
+		right: 26px;
+	}
+
+	&__check {
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		width: 61px;
+		height: 100%;
+		background-color: $ter-clr;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 500ms ease-in-out;
+		border-radius: 0px 15px 15px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			display: inline-block;
+			width: 21px;
+			height: 22px;
+			border-radius: 10.5px;
+			background-color: white;
+			color: $ter-clr;
+			text-align: center;
+			font-size: 16px;
+			transition: transform 500ms ease-out 50ms;
+		}
+	}
+
+	&:hover > &__check {
+		transform: scaleX(1);
+
+		span {
+			transform: rotate(360deg);
+		}
+	}
+
+	&:hover > &__price {
+		transform: translate(-60px, 13px);
+	}
+
+	&:hover > &__title {
+		width: 57%;
+	}
+
+	&:hover > &__byline {
+		width: 57%;
+	}
+}
