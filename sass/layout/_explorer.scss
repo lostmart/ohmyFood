@@ -1,0 +1,22 @@
+.explorer {
+	background: $white-cream;
+	text-align: center;
+	padding: 12px;
+
+	& h1 {
+		font-size: map-get($map: $font-size, $key: section-title);
+		padding: 0.9em;
+	}
+
+	& h2 {
+		font-weight: lighter;
+		font-size: map-get($map: $font-size, $key: component-title);
+		padding: 0.9em;
+	}
+
+	.explorer {
+		&__btn {
+			@include main-btn;
+		}
+	}
+}

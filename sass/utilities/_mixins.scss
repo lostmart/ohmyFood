@@ -1,0 +1,35 @@
+/*------------------------------Mise en page--------------------------*/
+@mixin desktop-only {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin main-btn {
+	display: inline-block;
+	font-size: map-get($map: $font-size, $key: component-title);
+	box-shadow: $box-shadow;
+	background: $clr-grad;
+	border-radius: 25.5px;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	width: 220px;
+	height: 51px;
+	border: none;
+	margin-bottom: 46px;
+	transition: all 250ms ease-in-out;
+
+	&:hover {
+		box-shadow: $hover-shadow;
+		opacity: 0.85;
+		transform: scale(1.1);
+	}
+}
+
+@mixin layout-card {
+	width: 100%;
+	border-radius: 15px;
+	box-shadow: $box-shadow;
+	margin: 18px 0px;
+}

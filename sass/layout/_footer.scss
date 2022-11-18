@@ -1,0 +1,32 @@
+.footer {
+	background-color: #353535;
+	color: white;
+	padding-top: 25px;
+	padding-bottom: 35px;
+
+	& h2 {
+		font-family: 'Shrikhand', cursive;
+		font-size: 20px;
+		margin-top: 0px;
+		margin-bottom: 1em;
+	}
+
+	& .footer__link {
+		color: #ffffff;
+	}
+
+	& ul {
+		padding: 0px;
+	}
+
+	& li {
+		list-style-type: none;
+		margin: 5px 0px;
+		font-size: map-get($map: $font-size, $key: component-title);
+	}
+
+	.footer__ico {
+		margin-right: 10px;
+		width: 25px;
+	}
+}

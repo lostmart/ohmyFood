@@ -1,0 +1,70 @@
+/* -----------------home-page - section sur le Fonctionnement-----------------*/
+/*Mise en page de la section*/
+.fontionnement {
+	background-color: white;
+	padding-top: 25px;
+	counter-reset: number;
+
+	& h3 {
+		font-size: map-get($map: $font-size, $key: section-title);
+	}
+
+	& ul {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: 0;
+		list-style-type: none;
+		margin-bottom: 50px;
+	}
+}
+
+/*Mise en page de la liste des étapes*/
+.step {
+	&__content {
+		&::before {
+			content: '' counter(number);
+			counter-increment: number;
+			background-color: $prm-clr;
+			border-radius: 25.5px;
+			width: 25px;
+			height: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			position: absolute;
+			left: -11px;
+			font-size: 0.75rem;
+		}
+
+		display: flex;
+		align-items: center;
+		gap: 22px;
+		padding-left: 33px;
+		background-color: $white-cream;
+		box-shadow: $box-shadow;
+		height: 60px;
+		width: 100%;
+		border-radius: 20px;
+		font-size: map-get($map: $font-size, $key: component-title);
+		position: relative;
+		margin: 13px 0px 13px 13px;
+
+		&__ico {
+			color: grey;
+		}
+
+		@include desktop-only {
+			width: 30%;
+		}
+	}
+
+	&__content:hover {
+		background-color: #f5edff;
+
+		& .step__ico {
+			color: $prm-clr;
+		}
+	}
+}
